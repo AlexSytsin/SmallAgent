@@ -52,8 +52,7 @@
 
 **Шаг 1: Клонирование репозитория**
 ```bash
-git clone [ССЫЛКА_НА_ВАШ_РЕПОЗИТОРИЙ]
-cd [НАЗВАНИЕ_ПАПКИ_ПРОЕКТА]
+git clone https://github.com/AlexSytsin/SmallAgent.git
 ```
 
 **Шаг 2: Настройка переменных окружения**
@@ -81,20 +80,14 @@ GOOGLE_CX="..."
 
 **Шаг 3: Установка зависимостей**
 
-Рекомендуется использовать виртуальное окружение.
+Рекомендуется использовать uv.
 
 ```bash
 # Создание виртуального окружения
-python -m venv .venv
-
-# Активация
-# Windows
-.venv\Scripts\activate
-# macOS / Linux
-source .venv/bin/activate
+uv venv
 
 # Установка зависимостей
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 ```
 
 **Шаг 4: Запуск FastAPI приложения**
@@ -143,6 +136,7 @@ curl -X POST "http://127.0.0.1:8000/analyze" \
 ├── .env.example  # Шаблон для .env
 ├── config.py     # Конфигурация приложения
 ├── main.py       # Точка входа FastAPI
+├── schemas.py    # Структуры данных
 ├── Dockerfile    # Инструкции для сборки Docker-образа
 └── docker-compose.yml # Файл для запуска через Docker Compose
 ```
