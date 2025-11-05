@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+langgraph
+langchain
+langchain-openai
+python-dotenv
+google-api-python-client
+lxml
+httpx
+beautifulsoup4
+trafilatura
